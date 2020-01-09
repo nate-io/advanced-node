@@ -4,6 +4,6 @@ Deep dive into Node with [Stephen Grider](https://www.udemy.com/course/advanced-
 1) Event Loop Internals
 2) Redis caching
 3) Scalable file/image uploads
-4) Worker Threads & Clustering
+4) Clustering
 5) Automated testing
 6) CI pipeline setup

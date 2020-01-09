@@ -70,7 +70,7 @@ class CustomPage {
       provide param(s) as args to in order they are in scope 
       after serialized & passed to puppeteer
   */
-  get (path) {
+  get(path) {
     return this.page.evaluate(_path => {
       return fetch(_path, {
         method: 'GET',
@@ -88,7 +88,7 @@ class CustomPage {
       provide param(s) as args to in order they are in scope 
       after serialized & passed to puppeteer
   */
-  post (path, data) {
+  post(path, data) {
     return this.page.evaluate(
       (_path, _data) => {
         return fetch(_path, {

@@ -4,7 +4,7 @@ node_js:
   - "8"
   # lightweight named linux dist good for testing; Travis moving away
 dist: trusty
-# services to start for test env
+# services to start for test env; they do not auth 
 services:
   - mongodb
   - redis-server

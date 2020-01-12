@@ -1,0 +1,29 @@
+# runtime
+language: node_js
+node_js:
+  - "8"
+  # lightweight named linux dist good for testing; Travis moving away
+dist: trusty
+# services to start for test env
+services:
+  - mongodb
+  - redis-server
+# set env vars
+env:
+  - NODE_ENV=ci PORT=3000
+# travis file cache for speedier runs
+cache:
+  directories:
+    - node_modules
+    - client/node_modules
+# build client first
+install:
+  - npm install
+  - npm run build
+# start server, add small delay to setup properly, then run test suite
+# nohup ensures the server does not get killed if the terminal which 
+# started is killed by CI environment
+script:
+  - nohup npm run start &
+  - sleep 3
+  - npm run test

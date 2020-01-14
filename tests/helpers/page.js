@@ -28,6 +28,8 @@ class CustomPage {
     });
 
     const page = await browser.newPage();
+    // ci workaround
+    page.setBypassCSP(true)
     const customPage = new CustomPage(page);
 
     // here we check each level of the Proxy for a given prop

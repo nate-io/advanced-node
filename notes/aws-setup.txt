@@ -1,0 +1,30 @@
+AWS S3 Setup
+
+S3 
+	- create Bucket (my-blogster-app-123)
+	- use default settings
+	
+IAM
+	- Policy
+		- grant access to bucket
+		- create policy
+			- select service s3
+			- actions
+				- All S3 Actions (should be more granular irl)
+			- resources
+				- add bucket name
+					- click add ARN, fill in bucket name
+				- add object 
+					- click Add ARN, fill bucket name, click 'Any' checkbox for object 
+			- add policy name
+			- create policy
+	- User
+		- user is the API, not end user	
+		- Click add user
+		- add user name
+		- access type (programmatic access)
+		- attach policy from above step
+		- review & create User
+		
+Server: 
+	- add id & key to app config file

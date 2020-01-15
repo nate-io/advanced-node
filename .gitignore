@@ -57,5 +57,11 @@ typings/
 # dotenv environment variables file
 .env
 
+# secrets!
+*.csv
+
 # next.js build output
 .next
+
+# misc
+notes/
